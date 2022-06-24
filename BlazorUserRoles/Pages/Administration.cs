@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 
-namespace BlazorUserRoles.Pages.Logic;
+namespace BlazorUserRoles.Pages;
 
 public class Administration : ComponentBase
 {

@@ -6,7 +6,7 @@
 
 <AuthorizeView>
     <Authorized>
-        @if(@context.User.IsInRole(BlazorRoles.Pages.Logic.ADMINISTRATION_ROLE))
+        @if(@context.User.IsInRole(ADMINISTRATION_ROLE))
         {
             <p>You are in @ADMINISTRATION_ROLE</p>
         }
