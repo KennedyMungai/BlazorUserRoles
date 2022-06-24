@@ -1,4 +1,24 @@
-﻿<h3>Administration</h3>
+﻿@page "/Administration"
+@inherits Administration
+
+<h3 class="text-center display-6 text-primary">Administration</h3>
+<hr>
+
+<AuthorizeView>
+    <Authorized>
+        @if(@context.User.IsInRole(BlazorRoles.Pages.Logic.ADMINISTRATION_ROLE))
+        {
+            <p>You are in @ADMINISTRATION_ROLE</p>
+        }
+        else
+        {
+            <p>You are not signed in as a user in @ADMINISTRATION_ROLE</p>
+        }
+    </Authorized>
+    <NotAuthorized>
+        <p>You are not logged in</p>
+    </NotAuthorized>
+</AuthorizeView>
 
 @code {
 
